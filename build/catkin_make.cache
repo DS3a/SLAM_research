@@ -1,2 +1,2 @@
-
+chetak_wc_description
 -DCATKIN_DEVEL_PREFIX=/home/d33p/SLAM_research/devel -DCMAKE_INSTALL_PREFIX=/home/d33p/SLAM_research/install -G Unix Makefiles

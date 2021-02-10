@@ -1,0 +1,8 @@
+prefix=/home/d33p/SLAM_research/devel
+
+Name: chetak_wc_description
+Description: Description of chetak_wc_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

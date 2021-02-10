@@ -112,5 +112,10 @@
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+      <include>
+        <uri>model://$HOME/SLAM_research/src/models/Mine</uri>
+        <name>Mine</name>
+        <pose>-2.0 0 0 0 0 0</pose>
+      </include>
   </world>
 </sdf>

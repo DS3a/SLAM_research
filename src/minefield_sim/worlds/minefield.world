@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <population name="mine_population1">
+      <model name="mine1">
+        <include>
+          <uri>model://Mine</uri>
+        </include>
+      </model>
+      <pose>1 0 0 0 0 0</pose>
+      <cylinder>
+        <radius>7</radius>
+        <length>0.01</length>
+      </cylinder>
+      <model_count>2</model_count>
+      <distribution>
+        <type>random</type>
+      </distribution>
+    </population>
+
+  </world>
+</sdf>

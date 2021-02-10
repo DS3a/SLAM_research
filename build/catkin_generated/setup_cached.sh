@@ -8,6 +8,7 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/d33p/SLAM_research/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/d33p/SLAM_research/devel/lib:$LD_LIBRARY_PATH"
 export PWD='/home/d33p/SLAM_research/build'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/d33p/SLAM_research/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/d33p/SLAM_research/src:$ROS_PACKAGE_PATH"
