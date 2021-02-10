@@ -1,0 +1,8 @@
+prefix=/home/d33p/SLAM_research/devel
+
+Name: minefield_sim
+Description: Description of minefield_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

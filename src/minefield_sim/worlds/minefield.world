@@ -16,7 +16,7 @@
           <uri>model://Mine</uri>
         </include>
       </model>
-      <pose>1 0 0 0 0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <cylinder>
         <radius>7</radius>
         <length>0.01</length>
