@@ -1,0 +1,14 @@
+<launch>
+  <param command="$(find xacro)/xacro $(find chetak_wc_description)/urdf/chetak_wc.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model chetak_wc" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find minefield_sim)/worlds/minefield.world"/>
+  </include>
+
+<node name="spawn_model_keytelop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+    <param name="speed" value="-1.0" type="double"/>
+    <param name="turn" value="-1.0" type="double"/>
+  </node>
+
+</launch>

@@ -19,7 +19,7 @@
       <pose>0 0 0 0 0 0</pose>
       <cylinder>
         <radius>7</radius>
-        <length>0.01</length>
+        <length>0.001</length>
       </cylinder>
       <model_count>2</model_count>
       <distribution>
