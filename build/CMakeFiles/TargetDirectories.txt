@@ -43,6 +43,13 @@
 /home/d33p/SLAM_research/build/minefield_sim/CMakeFiles/_catkin_empty_exported_target.dir
 /home/d33p/SLAM_research/build/minefield_sim/CMakeFiles/rebuild_cache.dir
 /home/d33p/SLAM_research/build/minefield_sim/CMakeFiles/install.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/install/strip.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/edit_cache.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/list_install_components.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/test.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/install/local.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/rebuild_cache.dir
+/home/d33p/SLAM_research/build/scanner/CMakeFiles/install.dir
 /home/d33p/SLAM_research/build/chetak_wc_description/CMakeFiles/install/strip.dir
 /home/d33p/SLAM_research/build/chetak_wc_description/CMakeFiles/edit_cache.dir
 /home/d33p/SLAM_research/build/chetak_wc_description/CMakeFiles/list_install_components.dir

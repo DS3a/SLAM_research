@@ -455,6 +455,24 @@ clean: minefield_sim/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory scanner
+
+# Convenience name for "all" pass in the directory.
+scanner/all:
+
+.PHONY : scanner/all
+
+# Convenience name for "clean" pass in the directory.
+scanner/clean:
+
+.PHONY : scanner/clean
+
+# Convenience name for "preinstall" pass in the directory.
+scanner/preinstall:
+
+.PHONY : scanner/preinstall
+
+#=============================================================================
 # Directory level rules for directory chetak_wc_description
 
 # Convenience name for "all" pass in the directory.
