@@ -2,5 +2,8 @@ This is the workspace in which the simulation for the mine detection bot will be
 
 Changes made in this commit:
     Random placement of 2 mines has been done
-    But in order to do that I had to add the /Mine model to /usr/share/gazebo-9/models, it wasn't able to read it from the package file, gotta fix that
 
+
+The models, and textures in the minefield_sim/models, and the minefield_sim/media don't work unless you copy those folders to /usr/share/gazebo-9/
+
+Do that if you don't want any errors

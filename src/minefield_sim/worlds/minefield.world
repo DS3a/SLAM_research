@@ -1,14 +1,46 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
+
+
     <!-- A global light source -->
     <include>
       <uri>model://sun</uri>
     </include>
+
+
     <!-- A ground plane -->
     <include>
       <uri>model://ground_plane</uri>
     </include>
+
+    <!-- Just some sparse vegetation-->
+    <include>
+      <uri>model://Tree_1</uri>
+      <pose>-13 15 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Tree_1</uri>
+      <pose>13 -19 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Tree_2</uri>
+      <pose>-12 -12 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Tree_2</uri>
+      <pose>12 19 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Tree_2</uri>
+      <pose>-12 -27 0 0 0 0</pose>
+    </include>
+
+
 
     <population name="mine_population1">
       <model name="mine1">
