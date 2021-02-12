@@ -1,6 +1,23 @@
 <launch>
+
+  <!-- For the actual chetak bot -->
   <param command="$(find xacro)/xacro $(find chetak_wc_description)/urdf/chetak_wc.xacro" name="robot_description"/>
-  <node args="-param robot_description -urdf -model chetak_wc" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"/>
+  <node args="-param robot_description -urdf -model chetak_wc" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" />
+
+
+  <!-- For the actual chetak bot with the camera and stuff>
+  <param command="$(find xacro)/xacro $(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model chetak_wc_Camera" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/-->
+
+
+  <!-- For the chetak bot with the camera and bigger wheels-->
+  <!-- param command="$(find xacro)/xacro $(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model chetak_wc_Camera" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/ -->
+
+  <!-- Wheel bug fix>
+  <param command="$(find xacro)/xacro $(find chetak_wc_Wheel_bug_description)/urdf/chetak_wc_Wheel_bug.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model chetak_wc_Wheel_bug" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/-->
+
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find minefield_sim)/worlds/minefield.world"/>

@@ -23,10 +23,10 @@ def radial_scan():
         and not give any linear velocity at all
     """
 
-    radius_to_scan = 2 # in metres, or whatever units are used in the gazebo thingy
+    radius_to_scan = 10 # in metres, or whatever units are used in the gazebo thingy
     angular_speed = 2*pi # 1 rotation per second
 
-    time_to_complete = 20 # seconds
+    time_to_complete = 40 # seconds
 
     v_initial = 0
     v_final = 2 * pi * radius_to_scan * angular_speed / (2*pi) 
@@ -45,18 +45,18 @@ def radial_scan():
         v_current = v_initial + acceleration*(time.time()-time_at_start)
         if int(time.time()-time_at_start) % 2 == 0:
             print("moving with velocity : ", v_current) 
-        vel_msg.linear.x = v_current
+        vel_msg.linear.x = -v_current # cuz the bot's movement thingy has to be reversed
         radial_turn_positioner.publish(vel_msg)
 
 def turn_90():
-    angular_speed = 200
+    angular_speed = 2*pi
     vel_msg.angular.z = angular_speed
     vel_msg.linear.x = 0
 
-    time_to_rot = (pi/2)/angular_speed
-    time_to_rot = 3
+    time_to_rot = 5
+#    time_to_rot = 3
 
-    print("it'll take ", time_to_rot, " seconds to rotate 90 degrees")
+    print("it'll take ", time_to_rot, " seconds to rotate 360 degrees")
     time_init = time.time()
     while time.time() - time_init <= time_to_rot:
         radial_turn_positioner.publish(vel_msg)
@@ -66,6 +66,7 @@ def turn_90():
 
 if __name__ == "__main__":
 #    while not rospy.is_shutdown():
-    radial_scan()
-#    turn_90()
+#    radial_scan()
+    print("Radial scan done, now turning by 90 degrees")
+    turn_90()
     exit(0)
