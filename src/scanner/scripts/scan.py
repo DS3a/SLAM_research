@@ -4,6 +4,7 @@ import rospy
 import time
 from geometry_msgs.msg import Twist
 from math import pi
+import tf
 
 rospy.init_node("scanner", anonymous=False)
 #radial_turn_positioner = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10)

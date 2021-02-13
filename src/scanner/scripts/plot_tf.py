@@ -22,5 +22,5 @@ if __name__ == "__main__":
             continue
     
         for i in rot[2:4]:
-            print round(i, 4)
-        print "\n\n"
+            print(round(i, 4))
+        print("\n\n")
