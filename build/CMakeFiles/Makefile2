@@ -473,6 +473,24 @@ scanner/preinstall:
 .PHONY : scanner/preinstall
 
 #=============================================================================
+# Directory level rules for directory chetak_wc_Camera_description
+
+# Convenience name for "all" pass in the directory.
+chetak_wc_Camera_description/all:
+
+.PHONY : chetak_wc_Camera_description/all
+
+# Convenience name for "clean" pass in the directory.
+chetak_wc_Camera_description/clean:
+
+.PHONY : chetak_wc_Camera_description/clean
+
+# Convenience name for "preinstall" pass in the directory.
+chetak_wc_Camera_description/preinstall:
+
+.PHONY : chetak_wc_Camera_description/preinstall
+
+#=============================================================================
 # Directory level rules for directory chetak_wc_description
 
 # Convenience name for "all" pass in the directory.

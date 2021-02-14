@@ -66,7 +66,7 @@ endif()
 set(chetak_wc_Camera_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
-if("TRUE" STREQUAL "TRUE")
+if("FALSE" STREQUAL "TRUE")
   set(chetak_wc_Camera_description_SOURCE_PREFIX /home/d33p/SLAM_research/src/chetak_wc_Camera_description)
   set(chetak_wc_Camera_description_DEVEL_PREFIX /home/d33p/SLAM_research/devel)
   set(chetak_wc_Camera_description_INSTALL_PREFIX "")
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'chetak_wc_Camera_description' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'chetak_wc_Camera_description' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/d33p/SLAM_research/src/chetak_wc_Camera_description/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'chetak_wc_Camera_description' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '\${prefix}/${idir}'.  ${_report}")
     endif()
     _list_append_unique(chetak_wc_Camera_description_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/d33p/SLAM_research/devel/lib;/home/d33p/SLAM_research/devel/lib;/home/d33p/catkin_ws/devel/lib;/home/deep/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/d33p/SLAM_research/install/lib;/home/d33p/SLAM_research/devel/lib;/home/d33p/catkin_ws/devel/lib;/home/deep/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -56,3 +56,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/d33p/SLAM_research/build/scanner/catkin_generated/installspace/scan.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/d33p/SLAM_research/build/scanner/catkin_generated/installspace/plot_tf.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/d33p/SLAM_research/build/scanner/catkin_generated/installspace/bot.py")
+endif()
+

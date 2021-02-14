@@ -1,0 +1,275 @@
+<?xml version="1.0" ?>
+<robot name="chetak_wc_Camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.trans" />
+<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.36835618355447514 0.19999999999999993 0.20351102142822705"/>
+    <mass value="672.7916543636255"/>
+    <inertia ixx="16.448418" ixy="0.0" ixz="0.686477" iyy="27.73513" iyz="-0.0" izz="29.814385"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="b_r_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.950795411990839e-14 0.014827586206896545 0.00034482758620690834"/>
+    <mass value="4.022907567692149"/>
+    <inertia ixx="0.00623" ixy="0.0" ixz="-0.0" iyy="0.011756" iyz="3.4e-05" izz="0.006161"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.525 0.08 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/b_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.525 0.08 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/b_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="f_l_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.69266855876549e-14 -0.024854771784232288 0.00020746887966804906"/>
+    <mass value="6.686349819405563"/>
+    <inertia ixx="0.01123" ixy="-0.0" ixz="-0.0" iyy="0.019546" iyz="-4.8e-05" izz="0.011161"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.175 -0.48 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/f_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.175 -0.48 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/f_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="f_r_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-6.186717804723685e-14 0.024854771784232357 0.00020746887966806293"/>
+    <mass value="6.686349819405568"/>
+    <inertia ixx="0.01123" ixy="0.0" ixz="-0.0" iyy="0.019546" iyz="4.8e-05" izz="0.011161"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.175 0.08 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/f_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.175 0.08 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/f_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="b_l_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.684341886080802e-14 -0.01482758620689656 0.00034482758620690834"/>
+    <mass value="4.022907567692145"/>
+    <inertia ixx="0.00623" ixy="-0.0" ixz="-0.0" iyy="0.011756" iyz="-3.4e-05" izz="0.006161"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.525 -0.48 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/b_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.525 -0.48 -0.075"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/b_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="uvc_rod__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.6028648969212966e-07 1.942890293094024e-16 0.10000000000000037"/>
+    <mass value="3.9458403729087745"/>
+    <inertia ixx="0.025878" ixy="-0.0" ixz="-0.0" iyy="0.025878" iyz="0.0" izz="0.025451"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_rod__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_rod__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="uvc_plate_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.602864894145739e-07 -8.326672684688674e-17 0.21000000000000002"/>
+    <mass value="4.932300466135975"/>
+    <inertia ixx="0.012495" ixy="0.0" ixz="-0.0" iyy="0.012495" iyz="0.0" izz="0.024662"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02465948040039212 0.0 0.0033123354222588386"/>
+    <mass value="0.1374472217008489"/>
+    <inertia ixx="2.2e-05" ixy="-0.0" ixz="-8e-06" iyy="3.6e-05" iyz="0.0" izz="4.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015464 -0.2 -0.156443"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015464 -0.2 -0.156443"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="name_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0018014269029504593 -0.005035547186853978 0.0017554805683628882"/>
+    <mass value="0.1882623818568514"/>
+    <inertia ixx="0.001308" ixy="-1e-06" ixz="2.4e-05" iyy="4.9e-05" iyz="1e-06" izz="0.001296"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.094915 -0.2 -0.297034"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/name_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.094915 -0.2 -0.297034"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/name_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.016515433336358125 -1.4652168367490503e-13 -0.027529353548188"/>
+    <mass value="2.814971712983161"/>
+    <inertia ixx="0.005704" ixy="0.0" ixz="8e-05" iyy="0.001135" iyz="-0.0" izz="0.005636"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.034536 -0.2 -0.154443"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.034536 -0.2 -0.154443"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Camera_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.525 -0.08 0.075"/>
+  <parent link="base_link"/>
+  <child link="b_r_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rev8" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.175 0.48 0.075"/>
+  <parent link="base_link"/>
+  <child link="f_l_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rev9" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.175 -0.08 0.075"/>
+  <parent link="base_link"/>
+  <child link="f_r_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.525 0.48 0.075"/>
+  <parent link="base_link"/>
+  <child link="b_l_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid11" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.40087 0.2 0.32"/>
+  <parent link="base_link"/>
+  <child link="uvc_rod__1"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.40087 0.2 0.32"/>
+  <parent link="base_link"/>
+  <child link="uvc_plate_1"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015464 0.2 0.156443"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.094915 0.2 0.297034"/>
+  <parent link="base_link"/>
+  <child link="name_1"/>
+</joint>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.05 0.0 -0.002"/>
+  <parent link="lidar_1"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>

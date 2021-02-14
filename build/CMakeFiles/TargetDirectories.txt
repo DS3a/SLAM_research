@@ -50,6 +50,13 @@
 /home/d33p/SLAM_research/build/scanner/CMakeFiles/install/local.dir
 /home/d33p/SLAM_research/build/scanner/CMakeFiles/rebuild_cache.dir
 /home/d33p/SLAM_research/build/scanner/CMakeFiles/install.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/install/strip.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/edit_cache.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/list_install_components.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/test.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/install/local.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/rebuild_cache.dir
+/home/d33p/SLAM_research/build/chetak_wc_Camera_description/CMakeFiles/install.dir
 /home/d33p/SLAM_research/build/chetak_wc_description/CMakeFiles/install/strip.dir
 /home/d33p/SLAM_research/build/chetak_wc_description/CMakeFiles/edit_cache.dir
 /home/d33p/SLAM_research/build/chetak_wc_description/CMakeFiles/list_install_components.dir

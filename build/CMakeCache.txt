@@ -288,10 +288,10 @@ _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
 //Value Computed by CMake
-chetak_wc_Camera_description_BINARY_DIR:STATIC=/home/d33p/SLAM_research/build/chetak_wc_under_camera_bigger_wheels
+chetak_wc_Camera_description_BINARY_DIR:STATIC=/home/d33p/SLAM_research/build/chetak_wc_Camera_description
 
 //Value Computed by CMake
-chetak_wc_Camera_description_SOURCE_DIR:STATIC=/home/d33p/SLAM_research/src/chetak_wc_under_camera_bigger_wheels
+chetak_wc_Camera_description_SOURCE_DIR:STATIC=/home/d33p/SLAM_research/src/chetak_wc_Camera_description
 
 //Value Computed by CMake
 chetak_wc_Wheel_bug_description_BINARY_DIR:STATIC=/home/d33p/SLAM_research/build/chetak_wc_Wheel_bug_description
@@ -479,7 +479,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

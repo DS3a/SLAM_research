@@ -7,4 +7,5 @@
 subdirs("gtest")
 subdirs("minefield_sim")
 subdirs("scanner")
+subdirs("chetak_wc_Camera_description")
 subdirs("chetak_wc_description")

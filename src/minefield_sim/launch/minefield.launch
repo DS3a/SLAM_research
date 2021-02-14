@@ -1,6 +1,6 @@
 <launch>
 
-  <!-- For the actual chetak bot -->
+  <!--For the actual chetak bot-->
   <param command="$(find xacro)/xacro $(find chetak_wc_description)/urdf/chetak_wc.xacro" name="robot_description"/>
   <node args="-param robot_description -urdf -model chetak_wc" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" />
 
