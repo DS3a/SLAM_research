@@ -80,10 +80,10 @@ def radial_scan():
         and not give any linear velocity at all
     """
 
-    radius_to_scan = 10 # in metres, or whatever units are used in the gazebo thingy
-    angular_speed = 2*pi # 1 rotation per second
+    radius_to_scan = 2 # in metres, or whatever units are used in the gazebo thingy
+    angular_speed = pi/10 # 1 rotation per 20 seconds
 
-    time_to_complete = 300 # seconds
+    time_to_complete = 360 # seconds
 
     v_initial = 0
     v_final = 2 * pi * radius_to_scan * angular_speed / (2*pi) 
@@ -105,14 +105,16 @@ def radial_scan():
         vel_msg.linear.x = -v_current # cuz the bot's movement thingy has to be reversed
         radial_turn_positioner.publish(vel_msg)
 
+
 def circle():
-    radius = 2
-    bot = Bot(one_rot_ps=6.8*pi, one_mps=2.8)
+    radius = 1
+    bot = Bot(one_rot_ps=7.125*pi, one_mps=3.57)
     publisher = radial_turn_positioner
-    msg = bot.turn(0.5, 30) # angular_vel = (6.8/20)pi => time for one rot = 20
+    msg = bot.turn(0.5, 20) # angular_vel = (6.8/20)pi => time for one rot = 20
     angular_vel = bot.twist.angular.z
-    time_for_one_rot = 60 # seconds
+    time_for_one_rot = 40 # seconds
     msg = bot.move(2*pi*radius, time_for_one_rot)
+#    msg = bot.move(0, time_for_one_rot)
     print(msg)
     time_init = time.time()
     while time.time() - time_init <= time_for_one_rot:
@@ -122,6 +124,5 @@ def circle():
 
 if __name__ == "__main__":
 #    while not rospy.is_shutdown():
-#    radial_scan()
-    circle()
+    radial_scan()
     exit(0)
