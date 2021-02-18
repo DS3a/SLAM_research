@@ -53,7 +53,7 @@
         <radius>7</radius>
         <length>0.001</length>
       </cylinder>
-      <model_count>2</model_count>
+      <model_count>20</model_count>
       <distribution>
         <type>random</type>
       </distribution>

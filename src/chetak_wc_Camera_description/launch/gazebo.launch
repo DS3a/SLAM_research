@@ -2,10 +2,16 @@
   <param command="$(find xacro)/xacro $(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.xacro" name="robot_description"/>
   <node args="-param robot_description -urdf -model chetak_wc_Camera" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="paused" value="true"/>
+    <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
+    <arg name="debug" value="true"/>
   </include>
+ 
+<node name="spawn_model_keytelop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+    <param name="speed" value="1.0" type="double"/>
+    <param name="turn" value="1.0" type="double"/>
+  </node>
+
 </launch>

@@ -1,26 +1,26 @@
 <?xml version="1.0" ?>
-<robot name="chetak_wc_Camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="chetak_wc_Wheel_bug" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.trans" />
-<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.gazebo" />
+<xacro:include filename="$(find chetak_wc_Wheel_bug_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find chetak_wc_Wheel_bug_description)/urdf/chetak_wc_Wheel_bug.trans" />
+<xacro:include filename="$(find chetak_wc_Wheel_bug_description)/urdf/chetak_wc_Wheel_bug.gazebo" />
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.36835618355447514 0.19999999999999993 0.20351102142822705"/>
-    <mass value="67.27916543636255"/>
-    <inertia ixx="1.6448418" ixy="0.0" ixz="0.0686477" iyy="2.773513" iyz="0.0" izz="2.9814385"/>
+    <mass value="672.7916543636255"/>
+    <inertia ixx="16.448418" ixy="0.0" ixz="0.686477" iyy="27.73513" iyz="-0.0" izz="29.814385"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.525 0.08 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/b_r_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/b_r_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.525 0.08 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/b_r_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/b_r_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.175 -0.48 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/f_l_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/f_l_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.175 -0.48 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/f_l_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/f_l_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.175 0.08 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/f_r_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/f_r_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.175 0.08 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/f_r_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/f_r_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.525 -0.48 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/b_l_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/b_l_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.525 -0.48 -0.075"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/b_l_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/b_l_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +118,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_rod__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/uvc_rod__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_rod__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/uvc_rod__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -139,14 +139,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_plate_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/uvc_plate_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.40087 -0.2 -0.32"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/uvc_plate_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/uvc_plate_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -160,14 +160,35 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.015464 -0.2 -0.156443"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.015464 -0.2 -0.156443"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02247030893236321 -1.4652168367490503e-13 0.023484452064101102"/>
+    <mass value="2.814971712983161"/>
+    <inertia ixx="0.005636" ixy="0.0" ixz="-8e-05" iyy="0.001135" iyz="0.0" izz="0.005704"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.175 -0.2 -0.4"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.175 -0.2 -0.4"/>
+    <geometry>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -181,35 +202,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.094915 -0.2 -0.297034"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/name_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/name_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.094915 -0.2 -0.297034"/>
     <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/name_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="camera_1">
-  <inertial>
-    <origin rpy="0 1.5708 0" xyz="-0.016515433336358125 -1.4652168367490503e-13 -0.027529353548188"/>
-    <mass value="2.814971712983161"/>
-    <inertia ixx="0.005704" ixy="0.0" ixz="8e-05" iyy="0.001135" iyz="-0.0" izz="0.005636"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="-0.034536 -0.2 -0.154443"/>
-    <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="-0.034536 -0.2 -0.154443"/>
-    <geometry>
-      <mesh filename="package://chetak_wc_Camera_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://chetak_wc_Wheel_bug_description/meshes/name_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -260,16 +260,16 @@
   <child link="lidar_1"/>
 </joint>
 
+<joint name="Rigid14" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.175 0.2 0.4"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
 <joint name="Rigid15" type="fixed">
   <origin rpy="0 0 0" xyz="-0.094915 0.2 0.297034"/>
   <parent link="base_link"/>
   <child link="name_1"/>
-</joint>
-
-<joint name="Rigid16" type="fixed">
-  <origin rpy="0 1.5708 0" xyz="0.05 0.0 -0.002"/>
-  <parent link="lidar_1"/>
-  <child link="camera_1"/>
 </joint>
 
 </robot>

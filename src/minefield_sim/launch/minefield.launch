@@ -1,13 +1,13 @@
 <launch>
 
-  <!--For the actual chetak bot-->
+  <!--For the actual chetak bot>
   <param command="$(find xacro)/xacro $(find chetak_wc_description)/urdf/chetak_wc.xacro" name="robot_description"/>
-  <node args="-param robot_description -urdf -model chetak_wc" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" />
+  <node args="-param robot_description -urdf -model chetak_wc" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" /-->
 
 
-  <!-- For the actual chetak bot with the camera and stuff>
+  <!-- For the actual chetak bot with the camera and stuff -->
   <param command="$(find xacro)/xacro $(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.xacro" name="robot_description"/>
-  <node args="-param robot_description -urdf -model chetak_wc_Camera" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/-->
+  <node args="-param robot_description -urdf -model chetak_wc_Camera" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
 
 
   <!-- For the chetak bot with the camera and bigger wheels-->
@@ -23,9 +23,19 @@
     <arg name="world_name" value="$(find minefield_sim)/worlds/minefield.world"/>
   </include>
 
-<node name="spawn_model_keytelop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+  
+  
+    <!-- RViz, Joint States and TF publisher -->  
+   <include file="$(find chetak_wc_Camera_description)/launch/display.launch" />
+
+
+  <!-- Minde Detection module -->
+  <include file="$(find mine_detection)/launch/find_3d_object.launch" />
+    
+<node name="spawn_model_keytelop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" launch-prefix="gnome-terminal --command">
     <param name="speed" value="-1.0" type="double"/>
     <param name="turn" value="-1.0" type="double"/>
   </node>
-
+  
+  
 </launch>

@@ -13,16 +13,16 @@
     <updateRate>100.0</updateRate>
     <robotNamespace>/</robotNamespace>
     <leftFrontJoint>Rev8</leftFrontJoint>
-    <rightFrontJoint>Rev7</rightFrontJoint>
+    <rightFrontJoint>Rev9</rightFrontJoint>
     <leftRearJoint>Rev10</leftRearJoint>
-    <rightRearJoint>Rev9</rightRearJoint>
+    <rightRearJoint>Rev7</rightRearJoint>
     <wheelSeparation>0.64</wheelSeparation>
     <wheelDiameter>0.3</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
     <odometryTopic>odom</odometryTopic>
     <odometryFrame>odom</odometryFrame>
     <commandTopic>cmd_vel</commandTopic>
-    <torque>20</torque>
+    <torque>2</torque>
     <topicName>cmd_vel</topicName>
     <broadcastTF>true</broadcastTF>
   </plugin>
@@ -30,9 +30,10 @@
 
  <!-- camera -->
   <gazebo reference="camera_1">
-    <sensor type="camera" name="camera_ground">
+    <sensor type="depth" name="camera_ir">
+      <pose>0 0 0 0 3.14 0</pose>
       <update_rate>30.0</update_rate>
-      <camera name="down">
+      <camera name="camera_ir">
         <horizontal_fov>1.3962634</horizontal_fov>
         <image>
           <width>800</width>
@@ -52,20 +53,32 @@
           <stddev>0.007</stddev>
         </noise>
       </camera>
-      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>down</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>camera_1</frameName>
-        <hackBaseline>0.07</hackBaseline>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
-      </plugin>
+        <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+          <baseline>0.2</baseline>
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>0.0</updateRate>
+          <cameraName>camera_ir</cameraName>
+          <imageTopicName>/camera/color/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+          <frameName>camera_1</frameName>
+          <pointCloudCutoff>0.5</pointCloudCutoff>
+          <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
     </sensor>
   </gazebo>
 
