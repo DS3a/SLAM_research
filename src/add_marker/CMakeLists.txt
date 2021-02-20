@@ -206,3 +206,8 @@ include_directories(
 
 add_executable(basic_shapes src/basic_shapes.cpp)
 target_link_libraries(basic_shapes ${catkin_LIBRARIES})
+
+catkin_install_python(PROGRAMS
+   scripts/add_markers.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
