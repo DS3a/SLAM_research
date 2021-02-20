@@ -133,8 +133,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/d33p/SLAM_research/build/gtest/cmake_install.cmake")
   include("/home/d33p/SLAM_research/build/minefield_sim/cmake_install.cmake")
   include("/home/d33p/SLAM_research/build/scanner/cmake_install.cmake")
+  include("/home/d33p/SLAM_research/build/add_marker/cmake_install.cmake")
   include("/home/d33p/SLAM_research/build/chetak_wc_Camera_description/cmake_install.cmake")
+  include("/home/d33p/SLAM_research/build/chetak_wc_Wheel_bug_description/cmake_install.cmake")
   include("/home/d33p/SLAM_research/build/chetak_wc_description/cmake_install.cmake")
+  include("/home/d33p/SLAM_research/build/mine_detection/cmake_install.cmake")
 
 endif()
 

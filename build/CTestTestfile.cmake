@@ -7,5 +7,8 @@
 subdirs("gtest")
 subdirs("minefield_sim")
 subdirs("scanner")
+subdirs("add_marker")
 subdirs("chetak_wc_Camera_description")
+subdirs("chetak_wc_Wheel_bug_description")
 subdirs("chetak_wc_description")
+subdirs("mine_detection")

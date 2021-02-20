@@ -61,6 +61,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/d33p/SLAM_research/build/scanner/catkin_generated/installspace/bot.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/d33p/SLAM_research/build/scanner/catkin_generated/installspace/test.py")
 endif()
 

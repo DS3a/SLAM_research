@@ -1,0 +1,8 @@
+prefix=/home/d33p/SLAM_research/install
+
+Name: add_marker
+Description: Description of add_marker
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
