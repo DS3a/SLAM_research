@@ -201,6 +201,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-catkin_install_python(PROGRAMS scripts/scan.py scripts/plot_tf.py scripts/bot.py
+catkin_install_python(PROGRAMS scripts/scan.py scripts/plot_tf.py scripts/test.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
