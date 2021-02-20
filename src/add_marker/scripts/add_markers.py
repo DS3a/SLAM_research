@@ -18,9 +18,6 @@ mines = []
 
 
 def add_mine(pose):
-"""
-	code to convert whatever comes in to a dictionary like this {"X":x_val, "Y":y_val}
-"""
 	mine = json.loads(pose)
 	mines.append({"X": pose["X"], "Y": pose["Y"]})
 
@@ -46,7 +43,7 @@ def json_to_marker(mine_pos):
 
 
 def mark_mines():
-	mine_finder = rospy.Subscriber(mine_topic, Twist, add_mine)
+	mine_finder = rospy.Subscriber(mine_topic, String, add_mine)
 	marker_array = MarkerArray()
 	for mine in mines:
 		marker_array.markers.append(json_to_marker(mine))
@@ -58,3 +55,6 @@ def mark_mines():
 if __name__ == "__main__":
 	mark_mines()
 
+    marker.color.b = 1.0
+
+    marker.pose.orientation.w = 1.0
