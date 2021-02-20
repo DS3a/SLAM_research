@@ -52,3 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/add_marker" TYPE FILE FILES "/home/d33p/SLAM_research/src/add_marker/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/add_marker" TYPE PROGRAM FILES "/home/d33p/SLAM_research/build/add_marker/catkin_generated/installspace/add_markers.py")
+endif()
+

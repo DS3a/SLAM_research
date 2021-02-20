@@ -2,7 +2,8 @@ This is the workspace in which the simulation for the mine detection bot will be
 
 Changes in latest commit:
 
-Added a depth camera sensor plugin to get posistion of the mine relative to the odom frame.
+the add_marker package was created, which adds markers to the map created by gmapping on rviz to mark the location of the mines when they're located
+
 Posistion of the mine can be obtained using tf and in the camera frame by using
 rosrun find_object_2d print_objects_detected node.
 
@@ -19,4 +20,11 @@ Changes made in previous commit:
 
 The models, and textures in the minefield_sim/models, and the minefield_sim/media don't work unless you copy those folders to /usr/share/gazebo-9/
 
-Do that if you don't want any errors
+
+Commands to run for the simulation:
+
+roslaunch minefield_sim minefield.launch
+rosrun add_marker add_markers.py
+rosrun scanner scan.py
+
+

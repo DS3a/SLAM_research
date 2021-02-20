@@ -26,4 +26,5 @@ if __name__ == "__main__":
             angle = 360 + angle 
         print(angle)    
         print("\n\n")
+        print type(trans)
         os.system("clear")

@@ -25,6 +25,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/d33p/SLAM_research/src/CMakeLists.txt"
   "/home/d33p/SLAM_research/src/add_marker/CMakeLists.txt"
   "/home/d33p/SLAM_research/src/add_marker/package.xml"
+  "/home/d33p/SLAM_research/src/add_marker/scripts/add_markers.py"
   "/home/d33p/SLAM_research/src/chetak_wc_Camera_description/CMakeLists.txt"
   "/home/d33p/SLAM_research/src/chetak_wc_Camera_description/package.xml"
   "/home/d33p/SLAM_research/src/chetak_wc_Wheel_bug_description/CMakeLists.txt"
