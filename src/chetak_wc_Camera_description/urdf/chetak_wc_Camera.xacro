@@ -2,13 +2,46 @@
 <robot name="chetak_wc_Camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find chetak_wc_Camera_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.trans" />
+<!-- xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.trans" /--> 
 <xacro:include filename="$(find chetak_wc_Camera_description)/urdf/chetak_wc_Camera.gazebo" />
+
+<gazebo reference="base_link">
+   <material>Gazebo/Grey</material>
+ </gazebo>
+ <gazebo reference="f_l_1">
+   <material>Gazebo/DarkGrey</material>
+ </gazebo>
+ <gazebo reference="f_r_1">
+   <material>Gazebo/DarkGrey</material>
+ </gazebo>
+<gazebo reference="b_l_1">
+   <material>Gazebo/DarkGrey</material>
+ </gazebo>
+ <gazebo reference="b_r_1">
+   <material>Gazebo/DarkGrey</material>
+ </gazebo>
+ <gazebo reference="name_1">
+   <material>Gazebo/White </material>
+ </gazebo>
+ <gazebo reference="uvc_rod__1">
+   <material>Gazebo/BlueGlow</material>
+ </gazebo>
+ <gazebo reference="uvc_plate_1">
+   <material>Gazebo/Grey </material>
+ </gazebo>
+ 
+ <gazebo reference="camera_1">
+   <material>Gazebo/White</material>
+ </gazebo>
+ <gazebo reference="lidar_1">
+   <material>Gazebo/White </material>
+ </gazebo>
+  
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.36835618355447514 0.19999999999999993 0.20351102142822705"/>
-    <mass value="67.27916543636255"/>
-    <inertia ixx="1.6448418" ixy="0.0" ixz="0.0686477" iyy="2.773513" iyz="0.0" izz="2.9814385"/>
+    <mass value="30"/>
+    <inertia ixx="16.448418" ixy="0.0" ixz="0.686477" iyy="27.73513" iyz="-0.0" izz="29.814385"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>

@@ -22,7 +22,7 @@
     <odometryTopic>odom</odometryTopic>
     <odometryFrame>odom</odometryFrame>
     <commandTopic>cmd_vel</commandTopic>
-    <torque>2</torque>
+    <torque>20</torque>
     <topicName>cmd_vel</topicName>
     <broadcastTF>true</broadcastTF>
   </plugin>
