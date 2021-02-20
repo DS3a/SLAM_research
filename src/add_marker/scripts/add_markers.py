@@ -4,13 +4,15 @@ import roslib
 import rospy
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
+from std_msgs.msg import String
+import json
 import tf
 
 
 rospy.init_node("marker")
 
 topic = "visualization_marker_array"
-mine_topic = ""
+mine_topic = "mine_pose"
 publisher = rospy.Publisher(topic, MarkerArray)
 mines = []
 
@@ -19,9 +21,10 @@ def add_mine(pose):
 """
 	code to convert whatever comes in to a dictionary like this {"X":x_val, "Y":y_val}
 """
-	mines.append(pose)
+	mine = json.loads(pose)
+	mines.append({"X": pose["X"], "Y": pose["Y"]})
 
-def json_to_marker(pose):
+def json_to_marker(mine_pos):
 	marker = Marker()
 	marker.header.frame_id = "/odom"	
 	marker.type = marker.CYLINDER
@@ -35,8 +38,8 @@ def json_to_marker(pose):
     marker.color.b = 1.0
 
     marker.pose.orientation.w = 1.0
-    marker.pose.position.x = pose["X"]
-    marker.pose.position.y = pose["Y"]
+    marker.pose.position.x = mine_pos["X"]
+    marker.pose.position.y = mine_pos["Y"]
     marker.pose.position.z = 0.5
 
     return marker
