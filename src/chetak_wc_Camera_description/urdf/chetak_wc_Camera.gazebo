@@ -31,7 +31,7 @@
  <!-- camera -->
   <gazebo reference="camera_1">
     <sensor type="depth" name="camera_ir">
-      <pose>0 0 0 0 3.14 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <update_rate>30.0</update_rate>
       <camera name="camera_ir">
         <horizontal_fov>1.3962634</horizontal_fov>
@@ -41,7 +41,7 @@
           <format>R8G8B8</format>
         </image>
         <clip>
-          <near>0.02</near>
+          <near>0.01</near>
           <far>300</far>
         </clip>
         <noise>
@@ -66,7 +66,7 @@
           <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
           <frameName>camera_1</frameName>
-          <pointCloudCutoff>0.5</pointCloudCutoff>
+          <pointCloudCutoff>0.01</pointCloudCutoff>
           <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
           <distortionK1>0</distortionK1>
           <distortionK2>0</distortionK2>

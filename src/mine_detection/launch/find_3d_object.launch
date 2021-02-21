@@ -1,5 +1,8 @@
 <launch>
 
+    <arg name="object_prefix" default="object"/>
+    <arg name="tf_example"    default="true"/>
+	
 	<node name="find_object_3d" pkg="find_object_2d" type="find_object_2d" output="screen">
 		<param name="gui" value="true" type="bool"/>
 		<param name="settings_path" value="~/.ros/find_object_2d.ini" type="str"/>
@@ -12,5 +15,12 @@
 		<remap from="depth_registered/image_raw" to="/camera/depth/image_raw"/>
 		<remap from="depth_registered/camera_info" to="/camera/color/camera_info"/>
 	</node>
+	
+
+<node if="$(arg tf_example)" name="tf_example" pkg="find_object_2d" type="tf_example" output="screen">
+		<param name="object_prefix" value="$(arg object_prefix)" type="str"/>
+	</node>
 
 </launch>
+
+
