@@ -10,7 +10,7 @@ import tf
 rospy.init_node("MapAreaGraph", anonymous = True)
 
 topic = "map_covered"    
-publisher = rospy.Publisher(topic, Int32,queue_size=10) 
+publisher = rospy.Publisher(topic, Int32,queue_size=1) 
 
 def area_covered(data):
     mapdata=data.data
