@@ -15,9 +15,9 @@ publisher = rospy.Publisher(topic, MarkerArray,queue_size=10)
 objid=0 
 rospy.init_node("marker", anonymous = True)
 listener = tf.TransformListener() 
-rospy.wait_for_service("gazebo_msgs/SpawnModel")
-spawn_model = rospy.ServiceProxy("gazebo_msgs/SpawnModel", SpawnModel)
-spawn_pose=Pose()
+#rospy.wait_for_service("gazebo_msgs/SpawnModel")
+#spawn_model = rospy.ServiceProxy("gazebo_msgs/SpawnModel", SpawnModel)
+#spawn_pose=Pose()
 
 
 def objtf(data1):
