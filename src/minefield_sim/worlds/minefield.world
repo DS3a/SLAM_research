@@ -8,10 +8,27 @@
       <uri>model://sun</uri>
     </include>
 
-
-    <!-- A ground plane -->
+    <!-- A normal ground plane >
     <include>
       <uri>model://ground_plane</uri>
+    </include -->
+
+    <!-- An asphalt ground plane-->
+
+    <!--include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://asphalt_plane</uri>
+    </include -->
+
+    <!-- end of asphalt plane-->
+
+
+    <!-- An uneven land -->
+    <include>
+      <uri>model://cpr_agriculture</uri>
+      <pose>-50 -75 -0.75 0 0 0</pose>
     </include>
 
     <!-- Just some sparse vegetation-->

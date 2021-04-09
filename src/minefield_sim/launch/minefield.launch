@@ -19,6 +19,9 @@
   <node args="-param robot_description -urdf -model chetak_wc_Wheel_bug" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/-->
 
 
+  <!-- include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find minefield_sim)/worlds/minefield.world"/>
+  </include -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find minefield_sim)/worlds/minefield.world"/>
   </include>

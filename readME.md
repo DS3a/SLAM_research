@@ -19,6 +19,7 @@ Changes made in previous commit:
 
 
 The models, and textures in the minefield_sim/models, and the minefield_sim/media don't work unless you copy those folders to /usr/share/gazebo-9/
+Also, copy everything from worlds/gazebo_models_worlds_collection to /usr/share/gazebo-9/ for the asphalt plane, and the agriculture, uneven terrain thing
 
 
 Commands to run for the simulation:
